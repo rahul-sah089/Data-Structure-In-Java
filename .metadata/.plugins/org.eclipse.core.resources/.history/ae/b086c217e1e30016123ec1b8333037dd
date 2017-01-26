@@ -1,0 +1,10 @@
+
+public class TowerOfHanoi {
+	public static void main(String[] args){
+		System.out.println("Example of Tower Of Hanoi");
+	}
+	
+	public static void TOH(int n,char BEG,char AUX,char END){
+		
+	}
+}

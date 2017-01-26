@@ -1,0 +1,14 @@
+
+public class TowerOfHanoi {
+	public static void main(String[] args){
+		System.out.println("Example of Tower Of Hanoi");
+	}
+	
+	public static void TOH(int n,char BEG,char AUX,char END){
+		if(n>=1){
+			TOH(n-1,BEG,END,AUX);
+			System.out.println("Move "+BEG+" to "+END);
+			TOH(n-1,AUX,BEG,END);
+		}
+	}
+}
