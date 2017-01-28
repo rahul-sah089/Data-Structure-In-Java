@@ -1,0 +1,35 @@
+package LinkedList2;
+
+public class LinkListAll {
+	Node head = null;
+
+	public Node getHead() {
+		return head;
+	}
+
+	public void traverse(Node head) {
+		Node temp = head;
+		while (temp.getLink() != null) {
+			System.out.println("-->" + temp.getInfo());
+			temp = temp.getLink();
+		}
+		System.out.println("-->" + temp.getInfo());
+	}
+
+	public void insertAtBeginning(Node node) {
+		node.setLink(head);
+		head = node;
+	}
+
+	public void insertAtEnd(Node node) {
+		
+		// traverse till end
+		while (head) {
+
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

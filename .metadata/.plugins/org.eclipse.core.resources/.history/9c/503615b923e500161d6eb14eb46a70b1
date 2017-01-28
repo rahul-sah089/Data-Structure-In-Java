@@ -1,0 +1,7 @@
+package LinkedList2;
+
+public class LinkListAll {
+	public static void main(String[] args){
+		
+	}
+}
