@@ -1,0 +1,10 @@
+package linkList;
+
+public class LinkListDemo {
+
+	public static void main(String[] args) {
+		//create node
+		//1) Create head node
+		Node head = new Node();
+	}
+}

@@ -1,0 +1,42 @@
+package linkList;
+
+public class LinkListDemo {
+
+	public static void main(String[] args) {
+		// create node
+		// 1) Create head node
+		Node head = new Node();
+		head.setInfo(1);
+
+		// 2) Create 2nd node
+		Node node1 = new Node();
+		node1.setInfo(2);
+		// set the pointer head link to node1
+		head.setLink(node1);
+
+		// 3) Create 3rd node
+		Node node2 = new Node();
+		node2.setInfo(3);
+		// set the node1 link to node2
+		node1.setLink(node2);
+
+		// 4) Create 4th node
+		Node node3 = new Node();
+		node3.setInfo(4);
+		// set the node2 link to node3
+		node2.setLink(node3);
+
+		// 5) Create 5th node
+		Node node4 = new Node();
+		node4.setInfo(5);
+
+		iterateList(head);
+	}
+
+	public static void iterateList(Node head) {
+		Node temp = head;
+		while(temp.getLink() != null){
+			
+		}
+	}
+}

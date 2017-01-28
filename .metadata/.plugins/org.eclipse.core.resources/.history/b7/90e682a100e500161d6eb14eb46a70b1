@@ -1,0 +1,10 @@
+package linkList;
+
+public class Node {
+	int info;
+	Node link;
+	
+	Node(){
+		link = null;
+	}
+}
