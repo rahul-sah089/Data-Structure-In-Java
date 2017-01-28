@@ -1,0 +1,6 @@
+package DoubleLinkList;
+
+public class DLLNode {
+	int info;
+	
+}

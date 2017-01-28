@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class FizzBuzzProblem {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		String input = s.next();
+		String[] value = input.split(" ");
+
+		for (int i = 0; i < value.length; i++) {
+			int val = Integer.parseInt(value[0]);
+		}
+
+	}
+
+	public static void printBuzzFizz(int val) {
+		for (int i = 1; i < val; i++) {
+			if (i % 3 == 0 && i % 5 == 0) {
+				System.out.println("FizzBuzz");
+			}
+
+			else if (i % 3 == 0 && i % 5 != 0) {
+				System.out.println("Fizz");
+			}
+
+			else if (i % 3 != 0 && i % 5 == 0) {
+				System.out.println("Buzz");
+			} else if (i % 3 != 0 && i % 5 != 0) {
+				System.out.println(i);
+			}
+		}
+	}
+}

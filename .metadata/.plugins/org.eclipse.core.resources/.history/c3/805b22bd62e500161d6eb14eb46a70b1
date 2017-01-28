@@ -1,0 +1,15 @@
+package DoubleLinkList;
+
+public class DLLNode {
+	int info;
+	DLLNode prevNode;
+	DLLNode nextNode;
+	
+	private DLLNode(int data){
+		this.info = data;
+		this.prevNode = null;
+		this.nextNode = null;
+	}
+	
+	
+}

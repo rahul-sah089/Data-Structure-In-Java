@@ -1,0 +1,41 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class FizzBuzzProblem {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = Integer.parseInt(br.readLine());
+		int a[] = new int[t];
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int i = 0;
+		while (st.hasMoreTokens()) {
+			a[i++] = Integer.parseInt(st.nextToken());
+		}
+
+		for (int j = 0; i < a.length; i++) {
+
+		}
+
+	}
+
+	public static void printBuzzFizz(int val) {
+		for (int i = 1; i < val; i++) {
+			if (i % 3 == 0 && i % 5 == 0) {
+				System.out.println("FizzBuzz");
+			}
+
+			else if (i % 3 == 0 && i % 5 != 0) {
+				System.out.println("Fizz");
+			}
+
+			else if (i % 3 != 0 && i % 5 == 0) {
+				System.out.println("Buzz");
+			}
+
+			else if (i % 3 != 0 && i % 5 != 0) {
+				System.out.println(i);
+			}
+		}
+	}
+}

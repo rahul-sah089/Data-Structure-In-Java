@@ -1,0 +1,9 @@
+package DoubleLinkList;
+
+public class DLLNode {
+	int info;
+	DLLNode prevNode;
+	DLLNode nextNode;
+	
+	
+}
