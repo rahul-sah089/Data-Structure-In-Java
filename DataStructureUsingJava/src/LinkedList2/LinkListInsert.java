@@ -83,6 +83,53 @@ public class LinkListInsert {
 		return length;
 	}
 
+	// remove from the head from the list
+	public synchronized static void removeFromHead() {
+		Node temp = head;
+		if (head == null) {
+			System.out.println("No element to delete");
+			return;
+		} else if (head != null) {
+			head = temp.getLink();
+			temp.setLink(null);
+		}
+	}
+
+	public synchronized static void removeFromEnd() {
+		Node temp = head;
+		Node prev = new Node();
+		while (temp.getLink() != null) {
+			prev = temp;
+			temp = temp.getLink();
+		}
+		prev.setLink(null);
+	}
+
+	public synchronized static void removeFromPosition(int index) {
+		if (index < 0) {
+			index = 0;
+		}
+		if (index >= length()) {
+			index = length() - 1;
+		}
+
+		if (head == null) {
+			return;
+		}
+
+		if (index == 0) {
+			head = head.getLink();
+		}
+
+		else {
+			Node temp = head;
+			for (int i = 0; i < index; i++) {
+				temp = temp.getLink();
+			}
+			temp.setLink(temp.getLink().getLink());
+		}
+	}
+
 	public static void main(String[] args) {
 		System.out.println("Start of linked list example");
 		System.out.println("Initial Length-->>" + length());
@@ -104,7 +151,16 @@ public class LinkListInsert {
 		insertAtEnd(4);
 		insertAtEnd(5);
 		traverse();
-		System.out.println("Final Length-->>" + length());
+		// remove from end
+		System.out.println("Removed from the head");
+		removeFromHead();
+		traverse();
+		System.out.println("Removed from the beginning");
+		removeFromEnd();
+		traverse();
+		System.out.println("Remove from position 3");
+		removeFromPosition(3);
+		traverse();
 
 		System.out.println("End of linked list example");
 	}

@@ -1,0 +1,9 @@
+package LinkedListRemove;
+
+public class RemoveFromList {
+	Node head = null;
+	
+	public static void main(String[] args){
+		
+	}
+}

@@ -1,0 +1,27 @@
+package LinkedListRemove;
+
+public class Node {
+	int info;
+	Node link;
+
+	public Node() {
+		link = null;
+	}
+
+	public int getInfo() {
+		return info;
+	}
+
+	public void setInfo(int info) {
+		this.info = info;
+	}
+
+	public Node getLink() {
+		return link;
+	}
+
+	public void setLink(Node link) {
+		this.link = link;
+	}
+
+}
