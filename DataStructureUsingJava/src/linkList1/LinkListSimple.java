@@ -4,23 +4,20 @@ public class LinkListSimple {
 
 	public static void main(String[] args) {
 		// create node
-		// 1) Create head node
+		// 1) Creating head node
 		Node head = new Node();
-		// 2) Create 2nd node
 		Node node1 = new Node();
-		// 3) Create 3rd node
 		Node node2 = new Node();
-		// 4) Create 4th node
 		Node node3 = new Node();
-		// 5) Create 5th node
 		Node node4 = new Node();
+
 		// storing data in info field
 		head.setInfo(1);
 		node1.setInfo(2);
 		node2.setInfo(3);
 		node3.setInfo(4);
 		node4.setInfo(5);
-		
+
 		// set the pointer head link to node1
 		head.setLink(node1);
 		// set the node1 link to node2
@@ -29,16 +26,62 @@ public class LinkListSimple {
 		node2.setLink(node3);
 		// set the node3 link to node4
 		node3.setLink(node4);
+		System.out.println("Printing the list using method1");
 		iterateList(head);
+		System.out.println();
+		System.out.println("Printing the list using method2");
+		printData(head);
+		System.out.println();
+		System.out.println("Printing the list using method3");
+		printReverse(head);
+		// reversing the list
+		head = reverse(head);
+		System.out.println();
+		printData(head);
+
 	}
 
 	public static void iterateList(Node head) {
 		Node temp = head;
 		while (temp.getLink() != null) {
-			System.out.println("-->" + temp.getInfo());
+			System.out.print("-->" + temp.getInfo());
 			// System.out.println("-->" + temp.getLink());
 			temp = temp.getLink();
 		}
-		System.out.println("-->" + temp.getInfo());
+		System.out.print("-->" + temp.getInfo());
+	}
+
+	// print the list using recursion
+	public static void printData(Node head) {
+		Node temp = head;
+		if (head == null) {
+			return;
+		}
+		System.out.print("-->" + temp.getInfo());
+		printData(head.getLink());
+
+	}
+
+	public static void printReverse(Node head) {
+		if (head == null) {
+			return;
+		}
+		printReverse(head.getLink());
+		System.out.print("-->" + head.getInfo());
+	}
+
+	public static Node reverse(Node head) {
+		Node prev = null;
+		Node current = head;
+		Node next = null;
+		while (current != null) {
+			next = current.getLink();
+			current.setLink(prev);
+			prev = current;
+			current = next;
+		}
+		head = prev;
+		current = next;
+		return head;
 	}
 }
