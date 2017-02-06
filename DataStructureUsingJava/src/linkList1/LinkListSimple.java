@@ -2,7 +2,7 @@ package linkList1;
 
 public class LinkListSimple {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// create node
 		// 1) Creating head node
 		Node head = new Node();
@@ -35,10 +35,31 @@ public class LinkListSimple {
 		System.out.println("Printing the list using method3");
 		printReverse(head);
 		// reversing the list
-		head = reverse(head);
+		// head = reverse(head);
 		System.out.println();
 		printData(head);
+		printLastNth(2, head);
 
+	}
+
+	public static void printLastNth(int n, Node head) throws Exception {
+		System.out.println();
+		System.out.println("Printing the Nth last element from the list");
+		Node currentNode = head;
+		Node auxNode = head;
+
+		for (int i = 0; i < n; i++) {
+			currentNode = currentNode.getLink();
+			if (currentNode == null) {
+				throw new Exception();
+			}
+		}
+
+		while (currentNode.getLink() != null) {
+			currentNode = currentNode.getLink();
+			auxNode = auxNode.getLink();
+		}
+		System.out.println("Node value==>" + auxNode.getInfo());
 	}
 
 	public static void iterateList(Node head) {
